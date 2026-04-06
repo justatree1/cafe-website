@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #111;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+button,
+.nav-link,
+p,
+.subtitle {
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #c59d5f;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(197, 157, 95, 0.3);
+}
+
+.hero img:hover {
+  transform: scale(1.05) !important;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Menu card hover effects */
+[style*="display: grid"] > div {
+  transition: all 0.4s ease;
+}
+
+[style*="display: grid"] > div:hover {
+  transform: translateY(-10px);
+}
+
+/* Carousel controls */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover:not([style*="absolute"]) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(197, 157, 95, 0.3);
+}
+
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.menu-image:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth image transitions */
+img {
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+}
