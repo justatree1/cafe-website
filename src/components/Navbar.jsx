@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      <h2 style={styles.logo}>☕ Cafe</h2>
+      <h2 style={styles.logo}>Cafe</h2>
 
       {/* Desktop Navigation */}
       <div style={{ ...styles.links, display: window.innerWidth > 768 ? 'flex' : 'none' }}>

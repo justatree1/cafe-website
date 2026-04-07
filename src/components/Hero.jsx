@@ -52,16 +52,16 @@ const styles = {
     position: "relative",
     overflow: "hidden",
     flexDirection: window.innerWidth < 768 ? "column" : "row",
-    justifyContent: window.innerWidth < 768 ? "center" : "space-between",
-    paddingTop: window.innerWidth < 768 ? "80px" : "0",
+    justifyContent: window.innerWidth < 768 ? "flex-start" : "space-between",
+    paddingTop: window.innerWidth < 768 ? "120px" : "0",
     paddingBottom: window.innerWidth < 768 ? "40px" : "0",
     minHeight: window.innerWidth < 768 ? "auto" : "100vh",
     "@media (max-width: 768px)": {
-      padding: "0 40px",
+      padding: "120px 40px 40px 40px",
       gap: "40px"
     },
     "@media (max-width: 640px)": {
-      padding: "0 20px",
+      padding: "100px 20px 40px 20px",
       gap: "20px"
     }
   },
@@ -71,8 +71,8 @@ const styles = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "800px",
-    height: "800px",
+    width: window.innerWidth < 768 ? "400px" : "800px",
+    height: window.innerWidth < 768 ? "400px" : "800px",
     background: "radial-gradient(circle, rgba(197, 157, 95, 0.15) 0%, transparent 70%)",
     borderRadius: "50%",
     animation: "float 6s ease-in-out infinite",
@@ -81,29 +81,30 @@ const styles = {
   },
 
   left: {
-    flex: 1,
+    flex: window.innerWidth < 768 ? "0 auto" : 1,
     color: "white",
     zIndex: 2,
-    position: "relative"
+    position: "relative",
+    width: window.innerWidth < 768 ? "100%" : "auto"
   },
 
   badge: {
     display: "inline-block",
-    padding: "8px 20px",
+    padding: window.innerWidth < 640 ? "6px 14px" : "8px 20px",
     background: "rgba(197, 157, 95, 0.1)",
     border: "1px solid #c59d5f",
     borderRadius: "50px",
-    fontSize: "13px",
+    fontSize: window.innerWidth < 640 ? "11px" : "13px",
     fontWeight: "600",
     color: "#c59d5f",
-    marginBottom: "30px",
+    marginBottom: window.innerWidth < 640 ? "15px" : "30px",
     letterSpacing: "1px"
   },
 
   title: {
     fontSize: window.innerWidth < 768 ? "42px" : "72px",
     fontWeight: "700",
-    marginBottom: "20px",
+    marginBottom: window.innerWidth < 640 ? "12px" : "20px",
     lineHeight: "1.1",
     letterSpacing: "-0.5px",
     animation: "slideInLeft 1s ease 0.2s forwards",
@@ -122,7 +123,7 @@ const styles = {
   subtitle: {
     fontSize: window.innerWidth < 768 ? "14px" : "18px",
     color: "#aaa",
-    marginBottom: "35px",
+    marginBottom: window.innerWidth < 640 ? "20px" : "35px",
     maxWidth: "400px",
     lineHeight: "1.6",
     animation: "fadeIn 1s ease 0.4s forwards",
@@ -130,11 +131,11 @@ const styles = {
   },
 
   button: {
-    padding: "16px 40px",
+    padding: window.innerWidth < 640 ? "12px 28px" : "16px 40px",
     background: "linear-gradient(90deg, #c59d5f, #d4a856)",
     border: "none",
     color: "#000",
-    fontSize: "16px",
+    fontSize: window.innerWidth < 640 ? "14px" : "16px",
     fontWeight: "600",
     cursor: "pointer",
     borderRadius: "10px",
@@ -149,7 +150,10 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     zIndex: 2,
-    position: "relative"
+    position: "relative",
+    order: window.innerWidth < 768 ? -1 : 0,
+    width: window.innerWidth < 768 ? "100%" : "auto",
+    minHeight: window.innerWidth < 768 ? "auto" : "auto"
   },
 
   imageWrapper: {
@@ -161,7 +165,10 @@ const styles = {
     overflow: "hidden",
     boxShadow: "0 40px 100px rgba(0,0,0,0.7)",
     position: "relative",
-    animation: "float 4s ease-in-out infinite"
+    animation: "float 4s ease-in-out infinite",
+    width: window.innerWidth < 768 ? "100%" : "auto",
+    maxWidth: window.innerWidth < 768 ? "100%" : "auto",
+    aspectRatio: window.innerWidth < 768 ? "16/9" : "auto"
   },
 
   glowEffect: {
@@ -178,7 +185,7 @@ const styles = {
 
   mugImage: {
     width: "100%",
-    height: "600px",
+    height: window.innerWidth < 768 ? "auto" : "600px",
     objectFit: "cover",
     transition: "all 0.4s ease",
     transform: "scale(1)",
