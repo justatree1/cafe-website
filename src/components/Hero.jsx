@@ -43,7 +43,7 @@ function Hero() {
 const styles = {
   hero: {
     display: "flex",
-    height: "100vh",
+    height: window.innerWidth < 768 ? "auto" : "100vh",
     padding: "0 100px",
     alignItems: "center",
     justifyContent: "space-between",

@@ -123,38 +123,43 @@ const styles = {
   },
   slideTitle: {
     position: "absolute",
-    bottom: "30px",
-    left: "30px",
-    fontSize: "28px",
+    bottom: window.innerWidth < 640 ? "15px" : "30px",
+    left: window.innerWidth < 640 ? "15px" : "30px",
+    fontSize: window.innerWidth < 640 ? "18px" : "28px",
     fontWeight: "700",
     color: "white",
-    textShadow: "0 2px 10px rgba(0,0,0,0.5)"
+    textShadow: "0 2px 10px rgba(0,0,0,0.5)",
+    maxWidth: window.innerWidth < 640 ? "calc(100% - 30px)" : "auto"
   },
   prevButton: {
     position: "absolute",
-    left: "-60px",
+    left: window.innerWidth < 640 ? "15px" : "-60px",
     top: "50%",
     transform: "translateY(-50%)",
-    background: "none",
+    background: window.innerWidth < 640 ? "rgba(0,0,0,0.5)" : "none",
     border: "none",
     color: "#c59d5f",
-    fontSize: "40px",
+    fontSize: window.innerWidth < 640 ? "32px" : "40px",
     cursor: "pointer",
     transition: "all 0.3s ease",
-    zIndex: 10
+    zIndex: 10,
+    padding: window.innerWidth < 640 ? "8px 12px" : "0",
+    borderRadius: window.innerWidth < 640 ? "8px" : "0"
   },
   nextButton: {
     position: "absolute",
-    right: "-60px",
+    right: window.innerWidth < 640 ? "15px" : "-60px",
     top: "50%",
     transform: "translateY(-50%)",
-    background: "none",
+    background: window.innerWidth < 640 ? "rgba(0,0,0,0.5)" : "none",
     border: "none",
     color: "#c59d5f",
-    fontSize: "40px",
+    fontSize: window.innerWidth < 640 ? "32px" : "40px",
     cursor: "pointer",
     transition: "all 0.3s ease",
-    zIndex: 10
+    zIndex: 10,
+    padding: window.innerWidth < 640 ? "8px 12px" : "0",
+    borderRadius: window.innerWidth < 640 ? "8px" : "0"
   },
   dots: {
     display: "flex",

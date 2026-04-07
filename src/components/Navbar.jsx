@@ -55,19 +55,22 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "20px 60px",
+    padding: window.innerWidth < 640 ? "16px 15px" : "20px 60px",
     zIndex: 1000,
     background: "rgba(0, 0, 0, 0.4)",
     backdropFilter: "blur(10px)",
-    WebkitBackdropFilter: "blur(10px)"
+    WebkitBackdropFilter: "blur(10px)",
+    boxSizing: "border-box"
   },
 
   logo: {
     fontFamily: "'Cormorant Garamond', serif",
-    fontSize: "36px",
+    fontSize: window.innerWidth < 640 ? "24px" : "36px",
     fontWeight: "700",
     color: "#f5f5f5",
-    letterSpacing: "3px"
+    letterSpacing: window.innerWidth < 640 ? "1px" : "3px",
+    margin: 0,
+    whiteSpace: "nowrap"
   },
 
   links: {
@@ -91,7 +94,10 @@ const styles = {
     border: 'none',
     cursor: 'pointer',
     gap: '5px',
-    padding: '5px'
+    padding: '5px',
+    boxSizing: 'border-box',
+    marginLeft: 'auto',
+    flexShrink: 0
   },
 
   hamburgerLine: {
@@ -113,7 +119,10 @@ const styles = {
     flexDirection: 'column',
     padding: '20px',
     gap: '15px',
-    borderBottom: '1px solid rgba(197, 157, 95, 0.2)'
+    borderBottom: '1px solid rgba(197, 157, 95, 0.2)',
+    boxSizing: 'border-box',
+    maxHeight: 'calc(100vh - 70px)',
+    overflowY: 'auto'
   },
 
   mobileLink: {
