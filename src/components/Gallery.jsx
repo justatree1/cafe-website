@@ -71,7 +71,17 @@ function Gallery() {
 
         <div style={styles.ctaContainer}>
           <p style={styles.ctaText}>Want to experience this space in person?</p>
-          <button style={styles.ctaButton}>Reserve a table</button>
+          <button 
+            style={styles.ctaButton}
+            onClick={() => {
+              const contactSection = document.getElementById('contact')
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
+          >
+            Reserve a table
+          </button>
         </div>
       </div>
     </div>

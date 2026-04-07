@@ -15,7 +15,15 @@ function Hero() {
           Where every cup tells a story
         </p>
 
-        <button style={styles.button}>
+        <button 
+          style={styles.button}
+          onClick={() => {
+            const menuSection = document.getElementById('menu')
+            if (menuSection) {
+              menuSection.scrollIntoView({ behavior: 'smooth' })
+            }
+          }}
+        >
           View Menu
         </button>
       </div>
