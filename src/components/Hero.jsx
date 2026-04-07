@@ -146,9 +146,10 @@ const styles = {
   },
 
   right: {
-    flex: 1,
+    flex: window.innerWidth < 768 ? "0 auto" : 1,
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
     zIndex: 2,
     position: "relative",
     order: window.innerWidth < 768 ? -1 : 0,
@@ -166,9 +167,12 @@ const styles = {
     boxShadow: "0 40px 100px rgba(0,0,0,0.7)",
     position: "relative",
     animation: "float 4s ease-in-out infinite",
-    width: window.innerWidth < 768 ? "100%" : "auto",
-    maxWidth: window.innerWidth < 768 ? "100%" : "auto",
-    aspectRatio: window.innerWidth < 768 ? "16/9" : "auto"
+    width: window.innerWidth < 768 ? "100%" : "500px",
+    maxWidth: window.innerWidth < 768 ? "100%" : "500px",
+    aspectRatio: window.innerWidth < 768 ? "16/9" : "auto",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   },
 
   glowEffect: {
@@ -185,7 +189,7 @@ const styles = {
 
   mugImage: {
     width: "100%",
-    height: window.innerWidth < 768 ? "auto" : "600px",
+    height: window.innerWidth < 768 ? "100%" : "500px",
     objectFit: "cover",
     transition: "all 0.4s ease",
     transform: "scale(1)",
