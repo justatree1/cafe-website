@@ -52,7 +52,7 @@ function About() {
 
 const styles = {
   about: {
-    padding: "100px 60px",
+    padding: window.innerWidth < 640 ? "60px 20px" : "100px 60px",
     background: "#0d0d0d",
     textAlign: "center"
   },
@@ -61,7 +61,7 @@ const styles = {
     margin: "0 auto"
   },
   title: {
-    fontSize: "48px",
+    fontSize: window.innerWidth < 640 ? "32px" : "48px",
     fontWeight: "700",
     marginBottom: "40px",
     color: "#ffffff",
@@ -73,18 +73,18 @@ const styles = {
     gap: "40px"
   },
   text: {
-    fontSize: "18px",
+    fontSize: window.innerWidth < 640 ? "14px" : "18px",
     color: "#aaa",
     lineHeight: "1.8",
     fontStyle: "italic"
   },
   features: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "30px"
+    gridTemplateColumns: window.innerWidth < 640 ? "1fr" : "repeat(3, 1fr)",
+    gap: window.innerWidth < 640 ? "20px" : "30px"
   },
   feature: {
-    padding: "30px",
+    padding: window.innerWidth < 640 ? "20px" : "30px",
     background: "#1a1a1a",
     borderRadius: "20px",
     boxShadow: "0 10px 40px rgba(0,0,0,0.3)"

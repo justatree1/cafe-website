@@ -156,3 +156,217 @@ img {
 .hero-image:hover {
   transform: scale(1.05);
 }
+
+/* Mobile-First Responsive Design */
+
+/* Tablet and small screens (768px and below) */
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  p, .subtitle {
+    font-size: 14px !important;
+  }
+
+  button {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+  }
+
+  .nav-link {
+    font-size: 14px !important;
+  }
+}
+
+/* Mobile phones (640px and below) */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  p, .subtitle {
+    font-size: 13px !important;
+  }
+
+  button {
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+  }
+
+  .nav-link {
+    font-size: 12px !important;
+    gap: 15px !important;
+  }
+
+  /* Navigation adjustments */
+  nav {
+    padding: 15px 20px !important;
+  }
+
+  nav h2 {
+    font-size: 20px !important;
+  }
+
+  /* Hero section */
+  #home {
+    padding: 80px 20px 40px !important;
+  }
+
+  .hero-content {
+    padding: 0 20px !important;
+  }
+
+  /* Menu section */
+  #menu {
+    padding: 60px 20px !important;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Gallery section */
+  #gallery {
+    padding: 60px 20px !important;
+  }
+
+  .carousel {
+    height: 300px !important;
+  }
+
+  .carousel-controls {
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  /* About section */
+  #about {
+    padding: 60px 20px !important;
+  }
+
+  .features {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 60px 20px !important;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Adjust button hover to avoid mobile issues */
+  button:hover {
+    transform: none !important;
+  }
+
+  .menu-card:hover {
+    transform: none !important;
+  }
+
+  .menu-image:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+/* Very small phones (480px and below) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 14px !important;
+  }
+
+  p, .subtitle {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  button {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  nav {
+    padding: 12px 15px !important;
+  }
+
+  nav h2 {
+    font-size: 18px !important;
+    letter-spacing: 1px !important;
+  }
+
+  #home {
+    padding: 70px 15px 30px !important;
+  }
+
+  #menu {
+    padding: 50px 15px !important;
+  }
+
+  #gallery {
+    padding: 50px 15px !important;
+  }
+
+  #about {
+    padding: 50px 15px !important;
+  }
+
+  #contact {
+    padding: 50px 15px !important;
+  }
+
+  .carousel {
+    height: 250px !important;
+  }
+
+  .feature {
+    padding: 20px !important;
+  }
+
+  .info-card {
+    padding: 25px 15px !important;
+  }
+
+  svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}

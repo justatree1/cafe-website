@@ -50,7 +50,7 @@ function Contact() {
 
 const styles = {
   contact: {
-    padding: "100px 60px",
+    padding: window.innerWidth < 640 ? "60px 20px" : "100px 60px",
     background: "#0d0d0d",
     textAlign: "center"
   },
@@ -59,25 +59,25 @@ const styles = {
     margin: "0 auto"
   },
   title: {
-    fontSize: "48px",
+    fontSize: window.innerWidth < 640 ? "32px" : "48px",
     fontWeight: "700",
     marginBottom: "15px",
     color: "#ffffff",
     fontFamily: "'Cormorant Garamond', serif"
   },
   subtitle: {
-    fontSize: "18px",
+    fontSize: window.innerWidth < 640 ? "14px" : "18px",
     color: "#aaa",
     marginBottom: "60px"
   },
   infoGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "30px",
+    gridTemplateColumns: window.innerWidth < 640 ? "1fr" : "repeat(3, 1fr)",
+    gap: window.innerWidth < 640 ? "20px" : "30px",
     marginBottom: "60px"
   },
   infoCard: {
-    padding: "40px 30px",
+    padding: window.innerWidth < 640 ? "25px 20px" : "40px 30px",
     background: "#1a1a1a",
     borderRadius: "20px",
     boxShadow: "0 10px 40px rgba(0,0,0,0.3)",

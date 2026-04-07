@@ -50,7 +50,20 @@ const styles = {
     background: "linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%)",
     gap: "60px",
     position: "relative",
-    overflow: "hidden"
+    overflow: "hidden",
+    flexDirection: window.innerWidth < 768 ? "column" : "row",
+    justifyContent: window.innerWidth < 768 ? "center" : "space-between",
+    paddingTop: window.innerWidth < 768 ? "80px" : "0",
+    paddingBottom: window.innerWidth < 768 ? "40px" : "0",
+    minHeight: window.innerWidth < 768 ? "auto" : "100vh",
+    "@media (max-width: 768px)": {
+      padding: "0 40px",
+      gap: "40px"
+    },
+    "@media (max-width: 640px)": {
+      padding: "0 20px",
+      gap: "20px"
+    }
   },
 
   bgGlow: {
@@ -88,7 +101,7 @@ const styles = {
   },
 
   title: {
-    fontSize: "72px",
+    fontSize: window.innerWidth < 768 ? "42px" : "72px",
     fontWeight: "700",
     marginBottom: "20px",
     lineHeight: "1.1",
@@ -107,7 +120,7 @@ const styles = {
   },
 
   subtitle: {
-    fontSize: "18px",
+    fontSize: window.innerWidth < 768 ? "14px" : "18px",
     color: "#aaa",
     marginBottom: "35px",
     maxWidth: "400px",

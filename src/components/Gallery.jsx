@@ -80,19 +80,19 @@ function Gallery() {
 
 const styles = {
   gallery: {
-    padding: "100px 60px",
+    padding: window.innerWidth < 640 ? "60px 20px" : "100px 60px",
     background: "#0d0d0d",
     textAlign: "center"
   },
   title: {
-    fontSize: "48px",
+    fontSize: window.innerWidth < 640 ? "32px" : "48px",
     fontWeight: "700",
     marginBottom: "15px",
     color: "#ffffff",
     fontFamily: "'Cormorant Garamond', serif"
   },
   subtitle: {
-    fontSize: "18px",
+    fontSize: window.innerWidth < 640 ? "14px" : "18px",
     color: "#aaa",
     marginBottom: "60px"
   },
@@ -104,7 +104,7 @@ const styles = {
   carousel: {
     position: "relative",
     width: "100%",
-    height: "500px",
+    height: window.innerWidth < 640 ? "300px" : "500px",
     borderRadius: "30px",
     overflow: "hidden",
     boxShadow: "0 20px 60px rgba(0,0,0,0.5)"

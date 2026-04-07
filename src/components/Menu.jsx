@@ -62,26 +62,26 @@ function Menu() {
 
 const styles = {
   menu: {
-    padding: "100px 60px",
+    padding: window.innerWidth < 640 ? "60px 20px" : "100px 60px",
     background: "#0d0d0d",
     textAlign: "center"
   },
   title: {
-    fontSize: "48px",
+    fontSize: window.innerWidth < 640 ? "32px" : "48px",
     fontWeight: "700",
     marginBottom: "15px",
     color: "#ffffff",
     fontFamily: "'Cormorant Garamond', serif"
   },
   subtitle: {
-    fontSize: "18px",
+    fontSize: window.innerWidth < 640 ? "14px" : "18px",
     color: "#aaa",
     marginBottom: "60px"
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "40px"
+    gridTemplateColumns: window.innerWidth < 640 ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: window.innerWidth < 640 ? "20px" : "40px"
   },
   card: {
     borderRadius: "20px",
