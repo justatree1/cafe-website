@@ -1,16 +1,78 @@
-# React + Vite
+# ☕ Café Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern café website built with React and Vite, designed to provide an engaging and visually appealing experience for visitors.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is a frontend web application that showcases a café through a clean interface, intuitive navigation, and responsive design. It was built to practice modern React development, component-based architecture, and frontend styling techniques.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Modern React-based user interface
+* Fast development and build process using Vite
+* Responsive design for desktop and mobile devices
+* Reusable React components
+* Interactive and user-friendly layout
+* Café-themed design and branding
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── assets/
+├── pages/
+├── App.jsx
+└── main.jsx
+```
+
+## Getting Started
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## Learning Outcomes
+
+Through this project, I strengthened my understanding of:
+
+* React fundamentals
+* Component-based UI development
+* State and props management
+* Project organization in React applications
+* Frontend design and responsiveness
+* Modern development workflows using Vite
+
+## Future Improvements
+
+* Online table reservations
+* Dynamic menu management
+* Backend integration
+* User authentication
+* Dark mode support
+
+---
+
+Built with React and Vite as part of my web development journey. ☕✨
